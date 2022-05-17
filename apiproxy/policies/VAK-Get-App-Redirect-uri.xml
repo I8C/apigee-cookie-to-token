@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerifyAPIKey async="false" continueOnError="false" enabled="true" name="VAK-Get-App-Redirect-uri">
+    <DisplayName>VAK-Get-App-Redirect-uri</DisplayName>
+    <Properties/>
+    <APIKey ref="app.api_key"/>
+</VerifyAPIKey>

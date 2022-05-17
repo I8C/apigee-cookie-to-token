@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="19" name="Cookie-To-Access-Token">
+    <Basepaths>/cookie-to-access-token</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1646294613584</CreatedAt>
+    <CreatedBy>guy.crets@i8c.be</CreatedBy>
+    <Description></Description>
+    <DisplayName>Cookie-To-Access-Token</DisplayName>
+    <LastModifiedAt>1652773489981</LastModifiedAt>
+    <LastModifiedBy>guy.crets@i8c.be</LastModifiedBy>
+    <ManifestVersion>SHA-512:fbad85a4584f0c2ffbb00154a04276b7b20beb832051e487e37c9457ca9bb92bb60b7e238c967d33734db83361aea7b37e30849ed9b4c7b5f39d1a66a82a7a08:eu-west-1</ManifestVersion>
+    <Policies>
+        <Policy>AM-Extract-API-Key</Policy>
+        <Policy>AM-FirstPartyApp</Policy>
+        <Policy>AM-Set-IDP-Settings-Userinfo</Policy>
+        <Policy>AM-Testing-Convert-Cookie-Auth-Header</Policy>
+        <Policy>AM-Testing-Redirect-And-Set-Cookie</Policy>
+        <Policy>AM-Testing-Redirect-Back-To-Client</Policy>
+        <Policy>AM-Testing-Send-JWT</Policy>
+        <Policy>AM-Testing-Set-IDP-Settings</Policy>
+        <Policy>AM-Testing-Set-Query-Param</Policy>
+        <Policy>AM-Testing-Set-Token-Request-Variable</Policy>
+        <Policy>BA-Testing-Basic-Auth</Policy>
+        <Policy>BA-Testing-IDP-Basic-Auth</Policy>
+        <Policy>DecodeJWT-Testing-Extract-User-Info</Policy>
+        <Policy>EV-Extract-App-Name</Policy>
+        <Policy>EV-Testing-Extract-Access-Token</Policy>
+        <Policy>EV-Testing-Extract-AuthCode-And-API-Key</Policy>
+        <Policy>EV-Testing-Extract-Cookie-Header</Policy>
+        <Policy>EV-Testing-Extract-Cookie</Policy>
+        <Policy>FC-Refresh-Token</Policy>
+        <Policy>JS-Testing-Calculate-Expire-Epoch</Policy>
+        <Policy>Oauth-Testing-Generate-Cookie</Policy>
+        <Policy>Oauth-Testing-Verify-Cookie</Policy>
+        <Policy>RF-CSRF-Token-Missing</Policy>
+        <Policy>RF-CSRF-Tokens-Not-Match</Policy>
+        <Policy>SC-Testing-Exhange-Code-To-Token</Policy>
+        <Policy>Set-Oauth-Testing-Add-TokenInfo-To-Cookie</Policy>
+        <Policy>Set-Oauth-Testing-Info-After-Refresh</Policy>
+        <Policy>VAK-Get-IDP-Settings</Policy>
+        <Policy>VAK-Testing-Get-App-Info</Policy>
+        <Policy>add-cors</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>Testing</ProxyEndpoint>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://CalculateExpireEpoch.js</Resource>
+        <Resource>jsc://CheckExpiration.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AM-Set-Refresh-Request" version="SHA-512:aa14745afe1cacc0c979fd77983029758e54886fe48468feb74757b8d68c54500a19a346353a82107fcd01bf42a089d2e06cf3dcc31e8bdb2cf5cb9c984e33b1"/>
+        <VersionInfo resourceName="Basic-Authentication" version="SHA-512:af756d4b4ee82862e7b2fd0ac30797264a0dbf0445181817869c15176ccad43dc94fe771890676837139773800e70e74b9c258bb22e3dcd7aa4dd31e9ed294fd"/>
+        <VersionInfo resourceName="CalculateExpireDate" version="SHA-512:cdb21323d7937f0ae2b8563ffdb870a0af94f96363d6761f27873a8f92f60e62b5ac71552052b16ded2975d0e265a6af1070c7ea8de7201dd99b566a22abdba9"/>
+        <VersionInfo resourceName="EV-Retrieve-Access-Token" version="SHA-512:0ecb34534835f6d386cf097280bdc61c2d8eba39c25cc7fb71e917274107ef943c85b9ab4cb88423c4c671765e8e80b2c6bef5ac8138c4463dad4abcd41e29dd"/>
+        <VersionInfo resourceName="SC-Refresh-Token" version="SHA-512:38a3ed31a3dae6d507c09f57c88b76c9ea3df1e942eded7cd9de4cd0bb273452574a6651e26cf4b7d42f127aa402d20b2094605f776bfe2e86e5719dd8420122"/>
+    </Policies>
+    <ProxyEndpoints/>
+    <Resources>
+        <VersionInfo resourceName="jsc://CalculateExpireDate.js" version="SHA-512:6bc8628c67720675f615c524500e4591fdbe1411edf6747c5167f2108bdbff455155f0b2c56883187cfd9930a2999685a89424cfc1918767ba7b57a3dad4ccda"/>
+    </Resources>
+    <SharedFlows>
+        <VersionInfo resourceName="default" version="SHA-512:34a02cbff187aa7b2c883ab1c2e81c83a2f8499e0ec7cb5a06be9273c360664a5ad06f749482b956215b1e6a1011ca32ee95b27c438c6bcabcab8db08593eb86"/>
+    </SharedFlows>
+    <TargetEndpoints/>
+</Manifest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="FC-Retrieve-Cookie-Value">
+    <DisplayName>FC-Retrieve-Cookie-Value</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>SF-Create-Cookie</SharedFlowBundle>
+    <Parameters>
+        <Parameter name="in.client_id">{cookie.client_id}</Parameter>
+        <Parameter name="in.client_secret">{cookie.client_secret}</Parameter>
+        <Parameter name="in.access_token">{out.SF-exhange-authcode-access-token.access_token}</Parameter>
+        <Parameter name="in.expires_at">{out.SF-exhange-authcode-access-token.expires_at}</Parameter>
+    </Parameters>
+</FlowCallout>

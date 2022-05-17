@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="FC-Retrieve-Access-Token">
+    <DisplayName>FC-Retrieve-Access-Token</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>SF-Exhange-AuthCode-Access-Token</SharedFlowBundle>
+    <Parameters>
+        <Parameter name="in.client_id">{idp.client_id}</Parameter>
+        <Parameter name="in.client_secret">{idp.client_secret}</Parameter>
+        <Parameter name="in.redirect_uri">{idp.redirect_uri}</Parameter>
+        <Parameter name="in.token_endpoint">{idp.token_endpoint}</Parameter>
+        <Parameter name="in.SF-exhange-authcode-access-token.auth_code">{auth_code}</Parameter>
+    </Parameters>
+</FlowCallout>

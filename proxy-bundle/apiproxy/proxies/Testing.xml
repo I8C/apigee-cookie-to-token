@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="Testing">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>add-cors</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <Flows>
+        <Flow name="Authorize">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>AM-Extract-API-Key</Name>
+                </Step>
+                <Step>
+                    <Name>VAK-Testing-Get-App-Info</Name>
+                </Step>
+                <Step>
+                    <Name>AM-Testing-Set-IDP-Settings</Name>
+                </Step>
+                <Step>
+                    <Name>AM-Testing-Set-Query-Param</Name>
+                </Step>
+                <Step>
+                    <Name>BA-Testing-Basic-Auth</Name>
+                </Step>
+                <Step>
+                    <Name>Oauth-Testing-Generate-Cookie</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AM-Testing-Redirect-And-Set-Cookie</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/auth") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="Callback">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>EV-Testing-Extract-AuthCode-And-API-Key</Name>
+                </Step>
+                <Step>
+                    <Name>VAK-Testing-Get-App-Info</Name>
+                </Step>
+                <Step>
+                    <Name>AM-Testing-Set-IDP-Settings</Name>
+                </Step>
+                <Step>
+                    <Name>AM-Testing-Set-Token-Request-Variable</Name>
+                </Step>
+                <Step>
+                    <Name>BA-Testing-IDP-Basic-Auth</Name>
+                </Step>
+                <Step>
+                    <Name>SC-Testing-Exhange-Code-To-Token</Name>
+                </Step>
+                <Step>
+                    <Name>EV-Testing-Extract-Access-Token</Name>
+                </Step>
+                <Step>
+                    <Name>JS-Testing-Calculate-Expire-Epoch</Name>
+                </Step>
+                <Step>
+                    <Name>EV-Testing-Extract-Cookie-Header</Name>
+                </Step>
+                <Step>
+                    <Name>Set-Oauth-Testing-Add-TokenInfo-To-Cookie</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AM-Testing-Redirect-Back-To-Client</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/callback") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="UserInfo">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>RF-CSRF-Token-Missing</Name>
+                    <Condition>(request.header.x-token == null) or (request.header.x-token == "")</Condition>
+                </Step>
+                <Step>
+                    <Name>EV-Testing-Extract-Cookie</Name>
+                </Step>
+                <!--<Step>
+                    <Name>RF-CSRF-Tokens-Not-Match</Name>
+                    <Condition>(cookie != csrf-cookie)</Condition>
+                </Step>-->
+                <Step>
+                    <Name>AM-Testing-Convert-Cookie-Auth-Header</Name>
+                </Step>
+                <Step>
+                    <Name>Oauth-Testing-Verify-Cookie</Name>
+                </Step>
+                <Step>
+                    <Name>RF-CSRF-Tokens-Not-Match</Name>
+                    <Condition>(request.header.x-token != accesstoken.csrf-token)</Condition>
+                </Step>
+                <Step>
+                    <Name>VAK-Get-IDP-Settings</Name>
+                </Step>
+                <Step>
+                    <Name>AM-Set-IDP-Settings-Userinfo</Name>
+                </Step>
+                <Step>
+                    <Name>FC-Refresh-Token</Name>
+                </Step>
+                <Step>
+                    <Name>Set-Oauth-Testing-Info-After-Refresh</Name>
+                </Step>
+                <Step>
+                    <Name>DecodeJWT-Testing-Extract-User-Info</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AM-Testing-Send-JWT</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/userinfo") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="App">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>EV-Extract-App-Name</Name>
+                </Step>
+                <Step>
+                    <Name>VAK-Testing-Get-App-Info</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AM-FirstPartyApp</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/app/*") and (request.verb = "GET")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/testing</BasePath>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="NoRoute"/>
+</ProxyEndpoint>

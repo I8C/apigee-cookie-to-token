@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-Testing-Extract-Cookie-Header">
+    <DisplayName>EV-Testing-Extract-Cookie-Header</DisplayName>
+    <Properties/>
+    <Source>request</Source>
+    <Header name="Cookie">
+        <Pattern ignoreCase="false">*auth_cookie={cookie}</Pattern>
+    </Header>
+</ExtractVariables>

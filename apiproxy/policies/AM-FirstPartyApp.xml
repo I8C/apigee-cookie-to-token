@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-FirstPartyApp">
+    <DisplayName>AM-FirstPartyApp</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="text/html">
+            <html lang="en">
+                <head>
+                    <meta charset="utf-8"/>
+                    <link rel="icon" href="https://{verifyapikey.VAK-Testing-Get-App-Info.hosting_domain}/favicon.ico"/>
+                    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+                    <meta name="theme-color" content="#000000"/>
+                    <meta name="description" content="Web site created using create-react-app"/>
+                    <link rel="apple-touch-icon" href="https://{verifyapikey.VAK-Testing-Get-App-Info.hosting_domain}/logo192.png"/>
+                    <link rel="manifest" href="https://{verifyapikey.VAK-Testing-Get-App-Info.hosting_domain}/manifest.json"/>
+                    <title>React App</title>
+                    <script defer="defer" src="https://{verifyapikey.VAK-Testing-Get-App-Info.hosting_domain}/static/js/main.js"/>
+                    <link href="https://{verifyapikey.VAK-Testing-Get-App-Info.hosting_domain}/static/css/main.css" rel="stylesheet"/>
+                </head>
+                <body>
+                    <noscript>You need to enable JavaScript to run this app.</noscript>
+                    <div id="root"/>
+                </body>
+            </html>
+        </Payload>
+        <!--<Headers>
+            <Header name="Set-Cookie">auth_cookie=test_auth_cookie; HttpOnly; SameSite=None; Secure; Path=/;</Header>
+        </Headers>-->
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

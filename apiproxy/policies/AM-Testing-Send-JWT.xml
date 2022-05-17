@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Testing-Send-JWT">
+    <DisplayName>AM-Testing-Send-JWT</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="text/json">
+           {
+           "name": "{jwt.DecodeJWT-Testing-Extract-User-Info.claim.name}"
+           }
+       </Payload>
+    </Set>
+    <Set>
+        <Headers>
+            <Header name="Set-Cookie">auth_cookie={cookie}; HttpOnly; Secure; Path=/; SameSite=None;</Header>
+        </Headers>
+    </Set>
+    <Add>
+        <Headers>
+            <Header name="Set-Cookie">csrf-token={csrf-cookie}; Secure; Path=/; SameSite=Strict;</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Extract-API-Key-From-Cookie">
+    <DisplayName>AM-Extract-API-Key-From-Cookie</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>apikey</Name>
+        <Ref>accesstoken.apikey</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

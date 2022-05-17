@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SetOAuthV2Info async="false" continueOnError="false" enabled="true" name="Set-Oauth-Testing-Add-TokenInfo-To-Cookie">
+    <DisplayName>Set-Oauth-Testing-Add-TokenInfo-To-Cookie</DisplayName>
+    <AccessToken ref="cookie"/>
+    <Attributes>
+        <Attribute name="idp.access_token" ref="resp.access_token"/>
+        <Attribute name="idp.id_token" ref="resp.id_token"/>
+        <Attribute name="idp.expires_at" ref="resp.expires_at"/>
+        <Attribute name="csrf-token" ref="CSRF-Token"/>
+        <Attribute name="idp.refresh_token" ref="resp.refresh_token"/>
+        <Attribute name="apikey" ref="app.api_key"/>
+    </Attributes>
+</SetOAuthV2Info>

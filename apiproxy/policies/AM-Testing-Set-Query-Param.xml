@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Testing-Set-Query-Param">
+    <DisplayName>AM-Testing-Set-Query-Param</DisplayName>
+    <Properties/>
+    <Set>
+        <QueryParams>
+            <QueryParam name="grant_type">client_credentials</QueryParam>
+        </QueryParams>
+    </Set>
+    <!--<AssignVariable>
+        <Name>CSRF-Token</Name>
+        <Template>{createUuid()}</Template>
+    </AssignVariable>-->
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="FC-Validate-Cookie">
+    <DisplayName>FC-Validate-Cookie</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>SF-Validate-Cookie-And-Access-Token</SharedFlowBundle>
+</FlowCallout>

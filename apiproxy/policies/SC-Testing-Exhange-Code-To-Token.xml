@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="SC-Testing-Exhange-Code-To-Token">
+    <DisplayName>SC-Testing-Exhange-Code-To-Token</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="token_request">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Set>
+            <Headers>
+                <Header name="Accept">application/json</Header>
+                <Header name="Content-Type">application/x-www-form-urlencoded</Header>
+            </Headers>
+            <Verb>POST</Verb>
+            <FormParams>
+                <FormParam name="grant_type">authorization_code</FormParam>
+                <FormParam name="code">{auth_code}</FormParam>
+                <FormParam name="redirect_uri">{idp.redirect_uri}</FormParam>
+            </FormParams>
+            <Path>{idp.token_endpoint}</Path>
+        </Set>
+    </Request>
+    <Response>token_response</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://{idp.host}</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

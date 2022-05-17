@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BasicAuthentication async="false" continueOnError="false" enabled="true" name="Basic-Authentication">
+    <DisplayName>Basic Authentication</DisplayName>
+    <Operation>Encode</Operation>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <User ref="in.client_id"/>
+    <Password ref="in.client_secret"/>
+    <AssignTo createNew="true">refresh_request.header.Authorization</AssignTo>
+</BasicAuthentication>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-Testing-Extract-Access-Token">
+    <DisplayName>EV-Testing-Extract-Access-Token</DisplayName>
+    <Properties/>
+    <Source>token_response</Source>
+    <JSONPayload>
+        <Variable name="resp.access_token" type="string">
+            <JSONPath>$.access_token</JSONPath>
+        </Variable>
+        <Variable name="resp.expires_in" type="long">
+            <JSONPath>$.expires_in</JSONPath>
+        </Variable>
+        <Variable name="resp.id_token" type="string">
+            <JSONPath>$.id_token</JSONPath>
+        </Variable>
+        <Variable name="resp.refresh_token" type="string">
+            <JSONPath>$.refresh_token</JSONPath>
+        </Variable>
+    </JSONPayload>
+</ExtractVariables>

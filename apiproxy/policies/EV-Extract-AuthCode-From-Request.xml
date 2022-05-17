@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-Extract-AuthCode-From-Request">
+    <DisplayName>EV-Extract-AuthCode-From-Request</DisplayName>
+    <Source>request</Source>
+    <QueryParam name="code">
+        <Pattern ignoreCase="false">{auth_code}</Pattern>
+    </QueryParam>
+    <QueryParam name="state">
+        <Pattern ignoreCase="false">{app.api_key}</Pattern>
+    </QueryParam>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</ExtractVariables>

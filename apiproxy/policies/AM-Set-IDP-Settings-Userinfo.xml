@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Set-IDP-Settings-Userinfo">
+    <DisplayName>AM-Set-IDP-Settings-Userinfo</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>idp.client_id</Name>
+        <Ref>verifyapikey.VAK-Get-IDP-Settings.idp.client_id</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.client_secret</Name>
+        <Ref>verifyapikey.VAK-Get-IDP-Settings.idp.client_secret</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.redirect_uri</Name>
+        <Ref>verifyapikey.VAK-Get-IDP-Settings.idp.redirect_uri</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.host</Name>
+        <Ref>verifyapikey.VAK-Get-IDP-Settings.idp.host</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.auth_endpoint</Name>
+        <Ref>verifyapikey.VAK-Get-IDP-Settings.idp.auth_endpoint</Ref>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.token_endpoint</Name>
+        <Ref>verifyapikey.VAK-Get-IDP-Settings.idp.token_endpoint</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

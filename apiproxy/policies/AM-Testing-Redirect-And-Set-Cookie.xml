@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Testing-Redirect-And-Set-Cookie">
+    <DisplayName>AM-Testing-Redirect-And-Set-Cookie</DisplayName>
+    <Properties/>
+    <Set>
+        <StatusCode>302</StatusCode>
+        <Headers>
+            <Header name="Location">https://{idp.host}{idp.auth_endpoint}?client_id={idp.client_id}&amp;state={app.api_key}&amp;nonce=randomnonce&amp;response_type=code&amp;redirect_uri={idp.redirect_uri}&amp;scope=openid profile offline_access</Header>
+            <Header name="Set-Cookie">auth_cookie={oauthv2accesstoken.Oauth-Testing-Generate-Cookie.access_token}; HttpOnly; Secure; Path=/; SameSite=None;</Header>
+        </Headers>
+    </Set>
+    <!--<Add>
+        <Headers>
+            <Header name="Set-Cookie">csrf-token={CSRF-Token}; Path=/; Secure; SameSite=None;</Header>
+        </Headers>
+    </Add>-->
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

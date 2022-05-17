@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SharedFlowBundle revision="3" name="SF-Use-Refresh_tokens">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1648735629547</CreatedAt>
+    <CreatedBy>guy.crets@i8c.be</CreatedBy>
+    <Description>undefined</Description>
+    <DisplayName>SF-Use-Refresh_tokens</DisplayName>
+    <LastModifiedAt>1650889181255</LastModifiedAt>
+    <LastModifiedBy>guy.crets@i8c.be</LastModifiedBy>
+    <ManifestVersion>SHA-512:f6c7009f033c38c312561d862fb9470372f2a830cfd4a3a2e1cd2cad0089f6821fde04794899dbed56b9b04b99e7ef5dec0525cedf24ae1c98c881227c3c11c3:eu-west-1</ManifestVersion>
+    <Policies>
+        <Policy>AM-Set-Refresh-Request</Policy>
+        <Policy>Basic-Authentication</Policy>
+        <Policy>CalculateExpireDate</Policy>
+        <Policy>EV-Retrieve-Access-Token</Policy>
+        <Policy>SC-Refresh-Token</Policy>
+    </Policies>
+    <Resources>
+        <Resource>jsc://CalculateExpireDate.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <subType>SharedFlow</subType>
+    <SharedFlows>
+        <SharedFlow>default</SharedFlow>
+    </SharedFlows>
+</SharedFlowBundle>

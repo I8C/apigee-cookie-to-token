@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Set-Cookie-Settings">
+    <DisplayName>AM-Set-Cookie-Settings</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>cookie.client_id</Name>
+        <Value>e8t5AzbYvZzcRjiN2DO0ph89f1yv5VST</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>cookie.client_secret</Name>
+        <Value>YS0aLsZTgYVHSlzQ</Value>
+    </AssignVariable>
+</AssignMessage>

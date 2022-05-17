@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="FC-Refresh-Token">
+    <DisplayName>FC-Refresh-Token</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>SF-Use-Refresh_tokens</SharedFlowBundle>
+    <Parameters>
+        <Parameter name="in.client_id">{idp.client_id}</Parameter>
+        <Parameter name="in.client_secret">{idp.client_secret}</Parameter>
+        <Parameter name="in.redirect_uri">{idp.redirect_uri}</Parameter>
+        <Parameter name="in.token_endpoint">{idp.token_endpoint}</Parameter>
+        <Parameter name="in.refresh_token">{accesstoken.idp.refresh_token}</Parameter>
+        <Parameter name="in.host">{idp.host}</Parameter>
+    </Parameters>
+</FlowCallout>

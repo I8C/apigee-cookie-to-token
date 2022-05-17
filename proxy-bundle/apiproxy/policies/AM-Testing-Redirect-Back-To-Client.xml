@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Testing-Redirect-Back-To-Client">
+    <DisplayName>AM-Testing-Redirect-Back-To-Client</DisplayName>
+    <Properties/>
+    <Set>
+        <StatusCode>302</StatusCode>
+        <Headers>
+            <Header name="Set-Cookie">auth_cookie={cookie}; HttpOnly; Secure; Path=/; SameSite=None;</Header>
+            <Header name="Location">{verifyapikey.VAK-Testing-Get-App-Info.send_back}</Header>
+        </Headers>
+    </Set>
+    <Add>
+        <Headers>
+            <Header name="Set-Cookie">csrf-token={CSRF-Token}; Secure; Path=/; SameSite=Strict;</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

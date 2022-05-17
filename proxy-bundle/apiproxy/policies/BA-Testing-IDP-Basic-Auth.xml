@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BasicAuthentication async="false" continueOnError="false" enabled="true" name="BA-Testing-IDP-Basic-Auth">
+    <DisplayName>BA-Testing-IDP-Basic-Auth</DisplayName>
+    <Operation>Encode</Operation>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <User ref="idp.client_id"/>
+    <Password ref="idp.client_secret"/>
+    <AssignTo createNew="true">token_request.header.Authorization</AssignTo>
+</BasicAuthentication>

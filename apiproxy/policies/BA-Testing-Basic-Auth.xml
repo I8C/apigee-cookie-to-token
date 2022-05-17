@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BasicAuthentication async="false" continueOnError="false" enabled="true" name="BA-Testing-Basic-Auth">
+    <DisplayName>BA-Testing-Basic-Auth</DisplayName>
+    <Operation>Encode</Operation>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <User ref="verifyapikey.VAK-Testing-Get-App-Info.client_id"/>
+    <Password ref="verifyapikey.VAK-Testing-Get-App-Info.client_secret"/>
+    <AssignTo createNew="true">request.header.Authorization</AssignTo>
+    <Source>request.header.Authorization</Source>
+</BasicAuthentication>

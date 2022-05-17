@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-Testing-Extract-Cookie">
+    <DisplayName>EV-Testing-Extract-Cookie</DisplayName>
+    <Properties/>
+    <Source>request</Source>
+    <Header name="Cookie">
+        <Pattern ignoreCase="false">auth_cookie={cookie};*</Pattern>
+    </Header>
+    <Header name="Cookie">
+        <Pattern ignoreCase="false">*csrf-token={csrf-cookie}</Pattern>
+    </Header>
+</ExtractVariables>

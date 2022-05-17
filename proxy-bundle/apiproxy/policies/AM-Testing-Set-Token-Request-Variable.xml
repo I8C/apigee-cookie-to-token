@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Testing-Set-Token-Request-Variable">
+    <DisplayName>AM-Testing-Set-Token-Request-Variable</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>name</Name>
+        <Value/>
+        <Ref/>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>CSRF-Token</Name>
+        <Template>{createUuid()}</Template>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="message">token_request</AssignTo>
+</AssignMessage>

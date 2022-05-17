@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Display-Token-Status">
+    <DisplayName>AM-Display-Token-Status</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json">
+           {
+           "Cookie": "{out.SF-Validate-Cookie-And-Access-Token.idp_access_token}",
+           "Expire": "{out.SF-Validate-Cookie-And-Access-Token.idp_expires_at}",
+           "Token_Status": "{out.SF-Validate-Cookie-And-Access-Token.token_status}"
+           }
+       </Payload>
+    </Set>
+</AssignMessage>

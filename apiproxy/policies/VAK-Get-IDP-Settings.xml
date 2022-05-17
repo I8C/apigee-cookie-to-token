@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerifyAPIKey async="false" continueOnError="false" enabled="true" name="VAK-Get-IDP-Settings">
+    <DisplayName>VAK-Get-IDP-Settings</DisplayName>
+    <Properties/>
+    <APIKey ref="accesstoken.apikey"/>
+</VerifyAPIKey>

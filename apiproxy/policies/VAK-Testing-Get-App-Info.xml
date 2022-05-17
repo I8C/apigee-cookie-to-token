@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerifyAPIKey async="false" continueOnError="false" enabled="true" name="VAK-Testing-Get-App-Info">
+    <DisplayName>VAK-Testing-Get-App-Info</DisplayName>
+    <Properties/>
+    <APIKey ref="app.api_key"/>
+</VerifyAPIKey>

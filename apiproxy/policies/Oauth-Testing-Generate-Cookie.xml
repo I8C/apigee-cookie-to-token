@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="Oauth-Testing-Generate-Cookie">
+    <DisplayName>Oauth-Testing-Generate-Cookie</DisplayName>
+    <Properties/>
+    <Operation>GenerateAccessToken</Operation>
+    <ExpiresIn>360000</ExpiresIn>
+    <SupportedGrantTypes>
+        <GrantType>client_credentials</GrantType>
+    </SupportedGrantTypes>
+    <GrantType>request.queryparam.grant_type</GrantType>
+    <!--<Attributes>
+        <Attribute name="CSRF-Token">{CSRF-Token}</Attribute>
+    </Attributes>-->
+    <GenerateResponse enabled="false"/>
+</OAuthV2>

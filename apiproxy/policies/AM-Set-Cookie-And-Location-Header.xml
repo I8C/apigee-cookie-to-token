@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Set-Cookie-And-Location-Header">
+    <DisplayName>AM-Set-Cookie-And-Location-Header</DisplayName>
+    <Properties/>
+    <Set>
+        <StatusCode>302</StatusCode>
+        <Headers>
+            <Header name="Set-Cookie">auth_cookie={oauthv2accesstoken.OA-Create-Cookie.access_token}; Secure; Path=/; SameSite=None;</Header>
+            <Header name="Location">{verifyapikey.VAK-Get-App-Redirect-uri.send_back}</Header>
+        </Headers>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

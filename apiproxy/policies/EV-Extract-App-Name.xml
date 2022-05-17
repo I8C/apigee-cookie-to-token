@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-Extract-App-Name">
+    <DisplayName>EV-Extract-App-Name</DisplayName>
+    <Properties/>
+    <URIPath>
+        <Pattern ignoreCase="true">/app/{app.api_key}</Pattern>
+    </URIPath>
+</ExtractVariables>

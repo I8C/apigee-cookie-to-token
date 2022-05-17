@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Set-Location-Header-To-IDP">
+    <DisplayName>AM-Set-Location-Header-To-IDP</DisplayName>
+    <Properties/>
+    <Set>
+        <StatusCode>302</StatusCode>
+        <Headers>
+            <Header name="Location">{idp.host}{idp.auth_endpoint}?client_id={idp.client_id}&amp;state={app.api_key}&amp;nonce=randomnonce&amp;response_type=code&amp;redirect_uri={idp.redirect_uri}&amp;scope=openid</Header>
+        </Headers>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

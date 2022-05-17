@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-Retrieve-Access-Token">
+    <DisplayName>EV-Retrieve-Access-Token</DisplayName>
+    <Properties/>
+    <Source>refresh_response</Source>
+    <JSONPayload>
+        <Variable name="out.SF-Use-Refresh_tokens.access_token" type="string">
+            <JSONPath>$.access_token</JSONPath>
+        </Variable>
+        <Variable name="out.SF-Use-Refresh_tokens.id_token" type="string">
+            <JSONPath>$.id_token</JSONPath>
+        </Variable>
+        <Variable name="out.SF-Use-Refresh_tokens.token_type" type="string">
+            <JSONPath>$.token_type</JSONPath>
+        </Variable>
+        <Variable name="SF-Use-Refresh_tokens.expires_in" type="long">
+            <JSONPath>$.expires_in</JSONPath>
+        </Variable>
+        <Variable name="out.SF-Use-Refresh_tokens.refresh_token" type="string">
+            <JSONPath>$.refresh_token</JSONPath>
+        </Variable>
+    </JSONPayload>
+</ExtractVariables>

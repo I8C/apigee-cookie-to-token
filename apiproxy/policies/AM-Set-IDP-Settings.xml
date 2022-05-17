@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Set-IDP-Settings">
+    <DisplayName>AM-Set-IDP-Settings</DisplayName>
+    <Properties/>
+    <AssignVariable>
+        <Name>idp.client_id</Name>
+        <Value>0oamrbb4myWj5dk0r696</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.client_secret</Name>
+        <Value>AA5hiJHvwzeAh-8DkeUGGu-hB3WaTp3NEuIIObC2</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.redirect_uri</Name>
+        <Value>https://guycrets-test.apigee.net/cookie-to-access-token/callback</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.host</Name>
+        <Value>https://trial-9389797.okta.com</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.auth_endpoint</Name>
+        <Value>/oauth2/default/v1/authorize</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>idp.token_endpoint</Name>
+        <Value>oauth2/default/v1/token</Value>
+    </AssignVariable>
+    <AssignVariable>
+        <Name>app.api_key</Name>
+        <Ref>request.queryparam.key</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="request"/>
+</AssignMessage>
